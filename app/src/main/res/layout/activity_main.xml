@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/temperature_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_text"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/convert_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/convert"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_input" />
+
+    <TextView
+        android:id="@+id/converting_to_textview_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/farenheit_to_celcius"
+        app:layout_constraintStart_toEndOf="@+id/convert_text"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_input" />
+
+    <RadioGroup
+
+        android:checkedButton="@id/farenheit_to_celcius"
+        android:id="@+id/temp_measurements_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_text">
+
+        <RadioButton
+            android:id="@+id/farenheit_to_celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/farenheit_to_celcius" />
+
+
+
+        <RadioButton
+            android:id="@+id/kelvin_to_celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kelvin_to_celcius"/>
+
+        <RadioButton
+            android:id="@+id/kelvin_to_farenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farenheit To Kelvin"/>
+
+
+
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/measurements_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Reverse Convertion ?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_measurements_option"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+    <Button
+        android:id="@+id/convert_temp_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#9C27B0"
+        android:text="Convert"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/measurements_switch"
+        app:layout_constraintVertical_bias="0.059" />
+
+
+    <TextView
+        android:id="@+id/convertion_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_temp_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
