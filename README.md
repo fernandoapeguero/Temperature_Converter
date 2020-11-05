@@ -1,4 +1,6 @@
 ## Temperature_Converter
-Temperature converter write in kotlin
+
+You can convert from fahrenheit to celcius and kelvin as well 
+
 
 
